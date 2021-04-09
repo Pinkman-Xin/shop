@@ -49,11 +49,12 @@ export default {
       this.$refs.loginFormRef.resetFields();
     },
     login(){
-      var that = this;
+      const that = this;
       this.$refs.loginFormRef.validate(valid=>{
         if(!valid) return;
         this.$http.post("login",this.loginForm)
         .then(function(ret){
+        
         if(ret.data.meta.status !==200)return that.$message.error('登录失败')
         that.$message.success('登录成功')
         window.sessionStorage.setItem("token",ret.data.data.token)
