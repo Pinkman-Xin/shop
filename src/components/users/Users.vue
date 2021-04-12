@@ -59,20 +59,17 @@
               size="mini"
               @click="removeUserById(scope.row.id)"
             ></el-button>
-
             <el-tooltip
               class="item"
               effect="dark"
               content="分配角色"
               :enterable="false"
-              placement="top"
-              
-            >
+              placement="top">
               <el-button
                 type="warning"
                 icon="el-icon-setting"
                 size="mini"
-                @click="setRole(scope.row)"
+                  @click="setRole(scope.row)"
               ></el-button>
             </el-tooltip>
           </template>
