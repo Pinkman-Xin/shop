@@ -157,6 +157,7 @@ export default {
         return this.$message.error('获取商品分类失败')
       }
       this.catelist = res.data.result
+      console.log(this.catelist);
       // 总数据条数
       this.total = res.data.total
     },
@@ -219,6 +220,7 @@ export default {
 
     },
     async showEditCate(id){
+      console.log(id);
       const { data: res } = await this.$http.get("categories/" + id);
       if (res.meta.status !== 200) {
         return this.$message.error("查询分类信息失败！");
