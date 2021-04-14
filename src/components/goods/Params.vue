@@ -85,7 +85,7 @@
             <el-button size="mini" type="primary" icon="el-icon-search" @click="showEditDialog(scope.row.attr_id)">编辑</el-button>
             <el-button size="mini" type="danger" icon="el-icon-search" @click="removeParams(scope.row.attr_id)">删除</el-button>
           </template>
-        </el-table-column>
+        </el-table-column>                               
       </el-table>
     </el-tab-pane>
   </el-tabs>
